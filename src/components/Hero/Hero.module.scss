@@ -1,0 +1,16 @@
+.hero {
+  // position: relative;
+  &::before {
+    content: '';
+    background-image: url('../../assets/hero-grid-decoration.png');
+    opacity: 0.5;
+    width: 100%;
+    position: absolute;
+    background-repeat: repeat;
+    height: calc(100% + rem-calc(200));
+    background-size: 10%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+}

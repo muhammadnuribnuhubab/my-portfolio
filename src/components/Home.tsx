@@ -1,9 +1,13 @@
 import React from 'react';
+import { Navbar } from './Navbar';
+import styles from './Home.module.scss';
+import { Hero } from './Hero';
 
 export const Home: React.FC = () => {
   return (
-    <div>
-      <h1 style={{ color: 'white' }}>My Portofolio</h1>
+    <div className={styles.homePage}>
+      <Navbar />
+      <Hero />
     </div>
   );
 };

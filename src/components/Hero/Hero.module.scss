@@ -13,4 +13,101 @@
     top: 0;
     left: 0;
   }
+  &::after {
+    content: '';
+    background-image: url('../../assets/hero-circle-decoration.png');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: 35%;
+    z-index: -2;
+    opacity: 0.5;
+  }
+  .wavesWrapper {
+    position: absolute;
+    width: 100%;
+    height: rem-calc(300);
+    bottom: rem-calc(84);
+    z-index: -1;
+    opacity: 0.8;
+  }
+
+  .wavesBackground {
+    height: 100%;
+    background-image: url('../../assets/waves-background.png');
+    background-repeat: repeat-x;
+    background-size: 16%;
+    background-position: bottom center;
+    opacity: 0.8;
+  }
+
+  .overflowWrapper {
+    overflow: hidden;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: get-spacing('spacing-2xl');
+
+      // decoration
+
+      .label {
+        display: flex;
+        padding: rem-calc(8) rem-calc(16);
+        border-radius: get-radius('radius-full');
+        background: get-color('neutral', 500);
+        color: get-color('neutral', 100);
+        @include typography('text-xs', 'medium');
+        border: 1px solid transparent;
+        background-image: linear-gradient(black, black),
+          linear-gradient(to right, #e96cf3, #8746eb);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        box-shadow: 0 4px 24px rgba(135, 70, 235, 0.32);
+
+        @include md {
+          padding: rem-calc(8) rem-calc(24);
+          @include typography('text-md', 'medium');
+        }
+      }
+
+      .title {
+        @include typography('display-xl', 'bold');
+        color: get-color('neutral', 100);
+        z-index: 2;
+
+        .highlight {
+          background: linear-gradient(to right, #e96cf3, #8746eb);
+          --webkit-background-clip: text;
+          --webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+
+          @include md {
+            @include typography('display-3xl', 'extrabold');
+          }
+        }
+
+        .box {
+          display: inline-block;
+          padding: 0.25rem 0.5rem;
+          margin: 0.25rem 0;
+          @include typography('display-xl', 'bold');
+          color: get-color('neutral', 100);
+          border-radius: 8px;
+          text-align: center;
+          position: relative;
+          z-index: 1;
+
+          border: 2px solid transparent;
+          border-image: linear-gradient(to right, #e96cf3, #8746eb);
+          background-origin: border-box;
+          background-clip: border-box;
+          background-color: transparent;
+        }
+      }
+    }
+  }
 }

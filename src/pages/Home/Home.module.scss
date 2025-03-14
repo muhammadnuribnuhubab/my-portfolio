@@ -1,0 +1,31 @@
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.home {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  display: no;
+}
+
+.about {
+  background: linear-gradient(45deg, #ffdde1, #ee9ca7);
+}
+
+.skills {
+  background: linear-gradient(45deg, #a1c4fd, #c2e9fb);
+}
+
+.projects {
+  background: linear-gradient(45deg, #ffb199, #ff0844);
+}
+
+.faq {
+  background: linear-gradient(45deg, #85ffbd, #fffb7d);
+}

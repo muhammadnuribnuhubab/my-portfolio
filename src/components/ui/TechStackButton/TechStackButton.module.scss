@@ -1,0 +1,12 @@
+.techStackItem {
+  @include typography('text-sm', 'regular');
+  border: 1px solid get-color('neutral', 300);
+  border-radius: get-radius('radius-full');
+  padding: rem-calc(4) rem-calc(16);
+
+  @include md {
+    .techStackItem {
+      padding: rem-calc(8) rem-calc(16);
+    }
+  }
+}
